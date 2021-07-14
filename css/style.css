@@ -181,13 +181,16 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 4px;
-  line-height: 0;
 }
 
 .hotel-info__offer {
   margin-left: 14px;
   margin-top: 4px;
+}
+
+.hotel-info__name {
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 .hotel-info__description {
