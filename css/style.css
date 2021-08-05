@@ -1021,16 +1021,16 @@ img {
 
 .footer-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(min-content, 1fr));
   grid-gap: 20px;
   grid-auto-rows: minmax(40px, min-content);
   align-items: start;
 }
 
 .footer__logo {
-  grid-row: 1 / 3;
   width: 166px;
-  align-self: center;
+  grid-row: 1 / 3;
+  align-self: stretch;
 }
 
 .footer__categories {
@@ -1046,7 +1046,7 @@ img {
 
 .footer__social-network {
   display: flex;
-  align-content: center;
+  align-content: start;
   grid-row: 2 / 4;
   grid-column: span 2;
 }
@@ -1117,14 +1117,23 @@ img {
   color: inherit;
 }
 
-.footer__input {
+.footer__input-name {
   background-color: #fff;
   border-radius: 4px;
   border: none;
   padding: 0 23px;
   height: 50px;
   margin-bottom: 15px;
-  flex-basis: 48%;
+  margin-right: 30px;
+}
+
+.footer__input-number {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px;
+  height: 50px;
+  margin-bottom: 15px;
 }
 
 .footer__message {
@@ -1173,9 +1182,6 @@ img {
   .card {
     width: 230px;
     height: 230px;
-  }
-  .footer__input {
-    flex-basis: 100%;
   }
 }
 
@@ -1339,14 +1345,14 @@ img {
     width: 100%;
   }
   .newsletter-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
     max-width: 576px;
     width: 92%;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .reviews-slider__item {
-    max-width: 580px;
     padding: 0 30px 30px;
+    max-width: 580px;
   }
   .reviews-slider__item::after, .reviews-slider__item::before {
     display: none;
@@ -1356,8 +1362,8 @@ img {
   }
   .reviews-slider__button--prev {
     left: 50%;
-    margin-left: -65px;
     transform: translate(-50%, 0);
+    margin-left: -65px;
   }
   .reviews-slider__button--next {
     right: 50%;
@@ -1399,10 +1405,13 @@ img {
   .card {
     width: 100%;
   }
+  .footer {
+    padding-top: 70px;
+  }
   .footer-wrapper {
     grid-template-columns: 1fr;
   }
-  .footer__Logo {
+  .footer__logo {
     grid-row: 1;
     grid-column: 1;
   }
